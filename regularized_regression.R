@@ -1,6 +1,5 @@
 # ADVANCED PENALIZED REGRESSION PIPELINE (MLR3 & GLMNET)
 
-# Memuat pustaka yang dibutuhkan
 suppressPackageStartupMessages({
   library(mlr3)
   library(mlr3learners)
@@ -9,9 +8,7 @@ suppressPackageStartupMessages({
   library(RSQLite)
 })
 
-# ---------------------------------------------------------
 # DATABASE ENGINE: REGRESSION AUDIT LAYER
-# ---------------------------------------------------------
 init_audit_db <- function(db_path = "regression_audit.db") {
   con <- dbConnect(RSQLite::SQLite(), db_path)
   
@@ -48,9 +45,7 @@ fetch_latest_logs <- function(db_path = "regression_audit.db", limit = 5) {
   return(df)
 }
 
-# ---------------------------------------------------------
 # MACHINE LEARNING PIPELINE: LASSO OPTIMIZATION
-# ---------------------------------------------------------
 run_regularized_pipeline <- function() {
   cat("Memulai eksekusi Automated Penalized Regression Pipeline...\n")
   
