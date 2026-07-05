@@ -47,20 +47,22 @@ To validate the model's predictive superiority, we strictly calibrated and bench
 ---
 
 ##  Local Execution Guide
-1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/dimssrmdn01/regularized-regression-mlr3.git](https://github.com/dimssrmdn01/regularized-regression-mlr3.git)
-   cd regularized-regression-mlr3
-   ```
 
-2. **Install R Dependencies:**
-   Execute the following inside your R console:
-   ```R
-   install.packages(c("mlr3", "mlr3learners", "mlr3pipelines", "glmnet", "DBI", "RSQLite"))
-   ```
+**1. Clone the Repository:**
+```bash
+git clone https://github.com/dimssrmdn01/regularized-regression-mlr3.git
+cd regularized-regression-mlr3
 
-3. **Run the Analytical Pipeline:**
-   Execute the core script via the terminal:
-   ```bash
-   Rscript regularized_pipeline.R
-   ```
+**2. Install R Dependencies:**
+Execute the following inside your R console to set up the environment:
+
+```R
+install.packages(c("mlr3", "mlr3learners", "mlr3pipelines", "glmnet", "DBI", "RSQLite", "ggplot2", "dplyr"))
+```
+
+**3. Run the Analytical Pipeline:**
+Execute the core script via the terminal to start the training and benchmarking process:
+
+```bash
+Rscript regularized_pipeline.R
+```
